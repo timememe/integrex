@@ -1,3 +1,4 @@
+/*  index.css  */
 .logo-icon {
   align-self: stretch;
   width: 198px;
@@ -876,7 +877,7 @@
   font-family: var(--font-onest);
 }
 .desktop-3 {
-  width: 1440px;
+  width: 100%;
   background-color: var(--color-white);
   line-height: normal;
   letter-spacing: normal;
