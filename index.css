@@ -713,9 +713,10 @@
   max-width: calc(100% - 782px);
 }
 .submit-button-icon {
-  margin-top: -103.9px;
-  height: 752.1px;
-  width: 752.1px;
+  margin-top: 3vh;
+  margin-left: 35vh;
+  height: 500px;
+  width: 100%;
   position: relative;
   object-fit: cover;
   flex-shrink: 0;
