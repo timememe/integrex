@@ -1,0 +1,641 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Onest', sans-serif;
+    background-color: #163172;
+    color: white;
+}
+
+header {
+    background-color: #163172;
+    padding: 1rem 5%; /* Добавлен горизонтальный отступ */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Ограничение максимальной ширины */
+    margin: 0 auto; /* Центрирование навигации */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-btn {
+    background-color: white;
+    color: #163172;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        height: 100vh;
+        top: 0;
+        background-color: #163172;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: right 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 1.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        color: white;  /* Убедимся, что текст всегда белый */
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        z-index: 2;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+}
+
+.nav-active {
+    right: 0;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* main block */
+
+.hero {
+    background-color: var(--color-darkslateblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 1rem;
+    min-height: 80vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.claim-wrapper {
+    width: 100%;
+    max-width: 668px;
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.claim {
+    margin: 0;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    background: linear-gradient(180deg, #d6e4f0, #163172);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.mask-group-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 60vh;
+    object-fit: contain;
+}
+
+.parallax-section {
+    align-self: stretch;
+    height: 1500px;
+    background: linear-gradient(180deg, #d6e4f0, #1e56a0), #d6e4f0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 781px var(--padding-xl) 180px;
+    box-sizing: border-box;
+    gap: 132px;
+    text-align: left;
+    font-size: var(--font-size-29xl);
+    color: var(--color-darkslateblue);
+}
+
+.parallax-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .claim {
+        font-size: 2.5rem;
+    }
+
+    .mask-group-icon {
+        height: 40vh; /* Updated logo size for mobile */
+    }
+
+    .parallax-section {
+        padding: 400px var(--padding-xl) 100px;
+        height: auto;
+        min-height: 1000px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .claim {
+        font-size: 2rem;
+    }
+}
+
+/* Компани дескрипшн */
+
+/* styles.css */
+.company-description {
+    --color-darkslateblue: #163172;
+    --color-white: #ffffff;
+    --padding-xl: 20px;
+    --padding-16xl: 35px;
+    --padding-5xl: 24px;
+    --padding-4xl: 23px;
+    --padding-15xl: 34px;
+    --gap-20xl: 39px;
+    --font-size-9xl: 28px;
+
+    min-height: 100vh;
+    padding: 0 var(--padding-xl) 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #d6e4f0, #1e56a0);
+    font-family: 'Onest', sans-serif;
+}
+
+.company-description .top-section {
+    display: flex;
+    gap: 20px; /* Уменьшен отступ между spacer и content */
+    margin-bottom: 50px;
+}
+
+.company-description .spacer {
+    width: 60vh;
+    height: 60vh;
+    margin-left: 25vh;
+    padding-bottom: 20vh;
+}
+
+.company-description .content {
+    flex: 1;
+    color: var(--color-darkslateblue);
+    padding-top: 20vh;
+    padding-right: 25vh;
+}
+
+.company-description h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--color-darkslateblue);
+}
+
+.company-description p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.company-description .cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 0 5% 20px; /* Добавлены боковые отступы */
+}
+
+.company-description .card {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: 250px;
+    border: 2px solid var(--color-darkslateblue);
+    border-radius: 15px; /* Добавлено закругление углов */
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-16xl) var(--padding-5xl) calc(var(--padding-4xl) + 5vh) var(--padding-15xl);
+    gap: var(--gap-20xl);
+    font-size: var(--font-size-9xl);
+    position: relative;
+    min-height: 300px;
+    aspect-ratio: 3/4; /* Добавлено соотношение сторон */
+}
+
+.company-description .bottom-section h2 {
+    text-align: left; /* Изменено выравнивание */
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding-left: 5%; /* Добавлен отступ слева */
+}
+
+.company-description .card h3 {
+    font-size: 2rem;
+    color: var(--color-darkslateblue);
+    margin-bottom: 15px;
+}
+
+.company-description .card p {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: var(--color-darkslateblue);
+    margin-bottom: 5vh;
+    margin-right: 5vh;
+}
+
+.company-description .card img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.company-description .card:nth-child(2) {
+    background-color: var(--color-darkslateblue);
+}
+
+.company-description .card:nth-child(2) h3,
+.company-description .card:nth-child(2) p {
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .company-description .top-section {
+        flex-direction: column;
+        gap: 10px; /* Минимальный отступ между spacer и content */
+    }
+
+    .company-description .spacer {
+        width: 100%;
+        height: 40vh; /* Изменено на 40vh для мобильной версии */
+        margin-left: 0;
+        padding-bottom: 0;
+    }
+
+    .company-description .content {
+        padding-top: 10px; /* Уменьшен верхний отступ */
+        padding-right: 0;
+    }
+
+    .company-description .cards-container {
+        padding: 0 20px 20px; /* Уменьшены боковые отступы для мобильных */
+    }
+
+    .company-description .card {
+        flex: 0 0 85%; /* Увеличена ширина карточки для мобильных */
+        aspect-ratio: auto; /* Сброс соотношения сторон для мобильных */
+    }
+
+    .company-description .bottom-section h2 {
+        padding-left: 20px; /* Уменьшен отступ слева для мобильных */
+    }
+
+    .hero {
+        min-height: 60vh; /* Минимальная высота для мобильной версии */
+    }
+}
+
+/* Стили для секции партнеров */
+.partners-section {
+    background-color: #163172;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.partners-section h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.frame-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.group-icon {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Стили для секции клиентов */
+.clients-section {
+    background-color: #d6e4f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.clients-section h2 {
+    color: #163172;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.clients-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ufg-icon,
+.mcrsft-icon,
+.hellenic-icon,
+.mp-logo-icon,
+.deutsche-icon {
+    width: auto;
+    height: auto;
+    max-width: 20vh;
+    max-height: 20vh;
+    object-fit: contain;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .frame-container {
+        display: grid;
+        grid-template-areas:
+            "a b"
+            "c d";
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .frame-container .group-icon:nth-child(1) { grid-area: a; }
+    .frame-container .group-icon:nth-child(2) { grid-area: b; }
+    .frame-container .group-icon:nth-child(3) { grid-area: c; }
+    .frame-container .group-icon:nth-child(4) { grid-area: d; }
+
+    .group-icon {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .clients-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .clients-container::after {
+        content: "";
+        grid-column: 1;
+    }
+
+    .ufg-icon,
+    .mcrsft-icon,
+    .hellenic-icon,
+    .mp-logo-icon,
+    .deutsche-icon {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Центрирование последних двух иконок */
+    .clients-container > *:nth-last-child(-n+2) {
+        grid-column: 2 / span 2;
+        justify-self: center;
+    }
+}
+
+/* Стили для секции формы обратной связи */
+.contact-form-section {
+    background-color: #d6e4f0;
+    padding: 50px 20px; /* Добавлен горизонтальный паддинг */
+}
+
+.contact-form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #163172;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 40px;
+    color: white;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #163172;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 20px 10px; /* Уменьшен паддинг для мобильных устройств */
+    }
+
+    .contact-form-container {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        padding: 20px; /* Уменьшен паддинг для мобильных устройств */
+    }
+
+    .contact-form h2 {
+        font-size: 2rem; /* Уменьшен размер шрифта для мобильных устройств */
+    }
+
+    .contact-image {
+        display: none; /* Скрываем изображение на мобильных устройствах */
+    }
+
+    .contact-form button {
+        align-self: center; /* Центрируем кнопку на мобильных устройствах */
+        width: 100%; /* Кнопка занимает всю ширину формы */
+        max-width: 200px; /* Ограничиваем максимальную ширину кнопки */
+    }
+}
+
+/* Стили для футера с контактами */
+.contacts-footer {
+    background-color: #163172;
+    color: white;
+    padding: 50px 0;
+}
+
+.contacts-footer h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    padding-left: 5%;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.contacts-footer hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer-links a {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="clean.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="public/logo.svg" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="who-we-are">Who we are</a></li>
+                <li><a href="#" class="what-we-do">What we do</a></li>
+                <li><a href="#" class="our-partners">Our partners</a></li>
+                <li><a href="#" class="our-clients">Our clients</a></li>
+                <li><a href="#" class="contacts">Contacts</a></li>
+            </ul>
+            <a href="#" class="contact-btn">Contact Us</a>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="claim-wrapper">
+            <h1 class="claim">Bridging systems.<br>Shaping the future.</h1>
+        </div>
+        <img class="mask-group-icon" loading="lazy" alt="Mask" src="./public/mask-group@2x.png" />
+    </section>
+
+    <section class="company-description">
+        <div class="top-section">
+            <img src="./public/spacer.svg" alt="Spacer" class="spacer">
+            <div class="content">
+                <h2>years at the forefront of IT innovation for enterprises</h2>
+                <p>For two decades, we've been at the vanguard of IT innovation, seamlessly integrating advanced solutions for enterprises. </p>
+                <p>Our expertise turns technological complexity into strategic advantage, ensuring your infrastructure is not just current, but future-ready.</p>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <h2>What we do</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Consulting Redefined</h3>
+                    <p>We redefine IT consulting, bridging the gap between complex solutions and strategic clarity. Our scope encompasses your entire digital landscape, ensuring every detail enhances your architecture's performance.</p>
+                    <img src="./public/vector.svg" alt="Consulting Icon">
+                </div>
+                <div class="card">
+                    <h3>Simplifying Outsourcing</h3>
+                    <p>We simplify the complexity of IT outsourcing, crafting resilient, cloud-based ecosystems. Education and migration become seamless, preparing your business for tomorrow's challenges today.</p>
+                    <img src="./public/vector-1.svg" alt="Outsourcing Icon">
+                </div>
+                <div class="card">
+                    <h3>Support with Agility</h3>
+                    <p>Our support model is built on flexibility, offering tailored solutions that keep your operations smooth and adaptable. Whether it's ongoing maintenance or critical support, we're there where and when you need us.</p>
+                    <img src="./public/vector1.svg" alt="Support Icon">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-section">
+        <h2>Our partners</h2>
+        <div class="frame-container">
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-59@2x.png" />
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-60@2x.png" />
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-61@2x.png" />
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-62@2x.png" />
+        </div>
+    </section>
+    
+    <section class="clients-section">
+        <h2>Our clients</h2>
+        <div class="clients-container">
+            <img class="ufg-icon" alt="UFG" src="./public/ufg@2x.png" />
+            <img class="mcrsft-icon" alt="Microsoft" src="./public/mcrsft@2x.png" />
+            <img class="hellenic-icon" alt="Hellenic" src="./public/hellenic@2x.png" />
+            <img class="mp-logo-icon" alt="MP" src="./public/mp-logo@2x.png" />
+            <img class="deutsche-icon" loading="lazy" alt="Deutsche" src="./public/deutsche@2x.png" />
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h2>Contact us:</h2>
+                <form>
+                    <input type="text" placeholder="Your name" required>
+                    <input type="tel" placeholder="Phone number" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-image">
+                <img src="./public/2-1@2x.png" alt="Contact illustration">
+            </div>
+        </div>
+    </section>
+    
+    <footer class="contacts-footer">
+        <h2>Contacts</h2>
+        <div class="contact-info">
+            <div class="address">
+                <p>Voskovcova 1130/28</p>
+                <p>152 00 Prague 5</p>
+                <p>Czech Republic</p>
+            </div>
+            <div class="contact-details">
+                <p>+7 (903) 903-9768770</p>
+                <p>info@integrex.eu</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>Integrex, 2024</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            let scrollPosition = window.pageYOffset;
+            let spacer = document.querySelector('.company-description .spacer');
+            let content = document.querySelector('.company-description .content');
+            
+            if (spacer && content) {
+                spacer.style.transform = `translateY(${scrollPosition * 0}px)`;
+                content.style.transform = `translateY(${scrollPosition * 0.05}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
