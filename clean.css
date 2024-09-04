@@ -5,10 +5,12 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Onest', sans-serif;
-    background-color: #163172;
+    background-color: #d6e4f0;
     color: white;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -130,7 +132,7 @@ nav {
 /* main block */
 
 .hero {
-    background-color: var(--color-darkslateblue);
+    background-color: #163172;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,8 +275,8 @@ nav {
 .company-description .cards-container {
     display: flex;
     gap: 20px;
-    overflow-x: auto;
-    padding: 0 5% 20px; /* Добавлены боковые отступы */
+    padding: 0 5% 20px; /* Отступы по бокам */
+    overflow-x: hidden; /* Отключаем горизонтальный скролл */
 }
 
 .company-description .card {
@@ -344,7 +346,19 @@ nav {
         width: 100%;
         height: 40vh; /* Изменено на 40vh для мобильной версии */
         margin-left: 0;
-        padding-bottom: 0;
+        padding-bottom: 110px;
+    }
+
+    .company-description h2 {
+        font-size: 2.5rem;
+        margin-top: -15vh;
+        margin-bottom: 20px;
+        color: var(--color-darkslateblue);
+    }
+
+    .company-description p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .company-description .content {
@@ -353,13 +367,18 @@ nav {
     }
 
     .company-description .cards-container {
-        padding: 0 20px 20px; /* Уменьшены боковые отступы для мобильных */
+        display: grid; /* Используем грид для колонок */
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 20px;
+        padding: 0 10px 20px; /* Уменьшаем боковые отступы */
     }
 
     .company-description .card {
-        flex: 0 0 85%; /* Увеличена ширина карточки для мобильных */
-        aspect-ratio: auto; /* Сброс соотношения сторон для мобильных */
+        flex: 0 0 100%; /* Карточка занимает всю ширину */
+        min-width: auto; /* Убираем фиксированную ширину */
+        aspect-ratio: auto; /* Сбрасываем соотношение сторон */
     }
+    
 
     .company-description .bottom-section h2 {
         padding-left: 20px; /* Уменьшен отступ слева для мобильных */
@@ -402,8 +421,9 @@ nav {
 /* Стили для секции клиентов */
 .clients-section {
     background-color: #d6e4f0;
-    padding: 50px 0;
+    margin: 50px 0;
     text-align: center;
+    padding: 20% 5%; 
 }
 
 .clients-section h2 {
@@ -413,13 +433,24 @@ nav {
 }
 
 .clients-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    justify-items: center; /* Центрируем иконки */
+    margin-bottom: 20px;
+}
+
+.first-row {
+    grid-template-columns: repeat(3, 1fr); /* Одна строка с тремя ячейками */
+}
+
+.second-row {
+    grid-template-columns: repeat(2, 1fr); /* Одна строка с двумя ячейками */
+    justify-content: center; /* Центрируем две иконки */
+}
+
+.clients-container img {
+    max-width: 100px; /* Ограничиваем ширину иконок */
+    height: auto;
 }
 
 .ufg-icon,
@@ -455,16 +486,13 @@ nav {
         height: auto;
     }
 
-    .clients-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 0 20px;
+    .first-row {
+        grid-template-columns: repeat(3, 1fr); /* Три иконки в одной строке */
     }
 
-    .clients-container::after {
-        content: "";
-        grid-column: 1;
+    .second-row {
+        grid-template-columns: repeat(2, 1fr); /* Две иконки в одной строке */
+        justify-content: center; /* Центрируем вторую строку */
     }
 
     .ufg-icon,
@@ -474,12 +502,6 @@ nav {
     .deutsche-icon {
         max-width: 100%;
         height: auto;
-    }
-
-    /* Центрирование последних двух иконок */
-    .clients-container > *:nth-last-child(-n+2) {
-        grid-column: 2 / span 2;
-        justify-self: center;
     }
 }
 
@@ -587,6 +609,9 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 30px;
     padding-left: 5%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-info {
@@ -601,7 +626,8 @@ nav {
 .contacts-footer hr {
     border: none;
     border-top: 1px solid white;
-    margin: 30px 0;
+    margin: 30px auto;
+    max-width: 90%;
 }
 
 .footer-bottom {
