@@ -71,7 +71,8 @@ nav {
         right: -100%;
         height: 100vh;
         top: 0;
-        background-color: #163172;
+        background-color: rgba(22, 49, 114, 0.95); /* Полупрозрачный фон */
+        z-index: 999; /* Меню выше других элементов */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -79,22 +80,29 @@ nav {
         width: 100%;
         transition: right 0.5s ease-in;
     }
-
-    .nav-links li {
-        opacity: 0;
-        margin: 1.5rem 0;
-    }
-
+    
     .nav-links a {
         font-size: 1.5rem;
-        color: white;  /* Убедимся, что текст всегда белый */
+        color: #d6e4f0; /* Цвет текста */
+        text-decoration: none;
+        transition: color 0.3s ease; /* Плавный переход для цвета */
+    }
+    
+    /* Переходы в хедере */
+    header nav a {
+        transition: color 0.3s ease; /* Переход цвета при наведении */
+    }
+    
+    /* Чтобы текст не мигал при открытии */
+    .nav-active .nav-links li {
+        opacity: 1;
     }
 
     .burger {
         display: block;
         position: absolute;
         right: 1rem;
-        z-index: 2;
+        z-index: 9999;
     }
 
     .contact-btn {
@@ -142,6 +150,7 @@ nav {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    opacity: 1;
 }
 
 .claim-wrapper {
@@ -168,8 +177,7 @@ nav {
 .mask-group-icon {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 25%;
     width: auto;
     height: 60vh;
     object-fit: contain;
@@ -295,7 +303,7 @@ nav {
     font-size: var(--font-size-9xl);
     position: relative;
     min-height: 300px;
-    aspect-ratio: 3/4; /* Добавлено соотношение сторон */
+    aspect-ratio: 4/4; /* Добавлено соотношение сторон */
 }
 
 .company-description .bottom-section h2 {
@@ -313,7 +321,7 @@ nav {
 
 .company-description .card p {
     flex-grow: 1;
-    font-size: 1rem;
+    font-size: 2vh;
     color: var(--color-darkslateblue);
     margin-bottom: 5vh;
     margin-right: 5vh;
@@ -423,7 +431,7 @@ nav {
     background-color: #d6e4f0;
     margin: 50px 0;
     text-align: center;
-    padding: 20% 5%; 
+    padding: 5% 25%; 
 }
 
 .clients-section h2 {
@@ -449,7 +457,7 @@ nav {
 }
 
 .clients-container img {
-    max-width: 100px; /* Ограничиваем ширину иконок */
+    max-width: 20vh; /* Ограничиваем ширину иконок */
     height: auto;
 }
 
@@ -483,6 +491,18 @@ nav {
 
     .group-icon {
         max-width: 100%;
+        height: auto;
+    }
+
+    .clients-section {
+        background-color: #d6e4f0;
+        margin: 50px 0;
+        text-align: center;
+        padding: 15% 5%; 
+    }
+
+    .clients-container img {
+        max-width: 100px; /* Ограничиваем ширину иконок */
         height: auto;
     }
 
@@ -664,4 +684,22 @@ nav {
         margin-left: 0;
         margin-right: 20px;
     }
+}
+
+/* Анимация fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Обеспечиваем, что блок hero не исчезнет */
+.hero {
+    display: flex;
+    opacity: 1;
 }
