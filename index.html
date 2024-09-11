@@ -1,406 +1,152 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="i-phone1314.css" media="none" id="mobile-css">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap"
-    />
-  </head>
-  <body>
-    <div class="desktop-3">
-      <header class="desktop-2">
-        <img class="logo-icon" loading="lazy" alt="" src="./public/logo.svg" />
-
-        <div class="desktop-2-inner">
-          <div class="who-we-are-parent">
-            <a class="who-we-are">Who we are</a>
-            <a class="what-we-do">What we do</a>
-            <a class="our-partners">Our partners</a>
-            <a class="our-clients">Our clients</a>
-            <a class="contacts">Contacts</a>
-          </div>
-        </div>
-        <div class="link-wrapper">
-          <button class="link" id="link">
-            <a class="contact-us">Contact us</a>
-            <div class="svg-wrapper">
-              <img class="svg-icon" alt="" src="./public/svg.svg" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="clean.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="public/logo.svg" alt="Logo">
             </div>
-          </button>
-        </div>
-      </header>
-      <section class="desktop-31">
-        <div class="bridging-systems-shaping-the-wrapper">
-          <h1 class="bridging-systems-shaping-the-container">
-            <p class="bridging-systems">Bridging systems.</p>
-            <p class="bridging-systems">Shaping the future.</p>
-          </h1>
-        </div>
-        <img class="icon" alt="" src="./public/2-1@2x.png" />
+            <ul class="nav-links">
+                <li><a href="#who-we-are">Who we are</a></li>
+                <li><a href="#what-we-do">What we do</a></li>
+                <li><a href="#our-partners">Our partners</a></li>
+                <li><a href="#our-clients">Our clients</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+            <a href="#" class="contact-btn">Contact Us</a>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
 
-        <img
-          class="mask-group-icon"
-          loading="lazy"
-          alt=""
-          src="./public/mask-group@2x.png"
-        />
-      </section>
-      <section class="desktop-4">
-        <div class="desktop-4-inner">
-          <div class="spacer-parent">
-            <img class="spacer-icon" alt="" src="./public/spacer.svg" />
-
-            <div class="frame-wrapper">
-              <div class="years-at-the-forefront-of-it-i-parent">
-                <h1 class="years-at-the-container">
-                  <p class="bridging-systems">
-                    years at the forefront of IT innovation
-                  </p>
-                  <p class="bridging-systems">for enterprises</p>
-                </h1>
-                <div class="for-two-decades-weve-been-at-wrapper">
-                  <h3 class="for-two-decades-container">
-                    <p class="for-two-decades">
-                      For two decades, we've been at the vanguard of IT
-                      innovation, seamlessly integrating advanced solutions for
-                      enterprises.
-                    </p>
-                    <p class="for-two-decades">
-                      Our expertise turns technological complexity into
-                      strategic advantage, ensuring your infrastructure
-                    </p>
-                    <p class="bridging-systems">
-                      is not just current, but future-ready.
-                    </p>
-                  </h3>
+    <section id="who-we-are" class="hero">
+        <div class="claim-wrapper">
+            <h1 class="claim fade-in">Bridging systems.<br>Shaping the future.</h1>
+        </div>
+        <img class="mask-group-icon fade-in" loading="lazy" alt="Mask" src="./public/mask-group@2x.png" />
+    </section>
+    
+    <section id="what-we-do" class="company-description fade-in">
+        <div class="top-section fade-in">
+            <img src="./public/spacer.svg" alt="Spacer" class="spacer fade-in">
+            <div class="content fade-in">
+                <h2>years at the forefront of IT innovation for enterprises</h2>
+                <p>For two decades, we've been at the vanguard of IT innovation, seamlessly integrating advanced solutions for enterprises. </p>
+                <p>Our expertise turns technological complexity into strategic advantage, ensuring your infrastructure is not just current, but future-ready.</p>
+            </div>
+        </div>
+        <div class="bottom-section fade-in">
+            <h2>What we do</h2>
+            <div class="cards-container fade-in">
+                <!-- Ваши карточки -->
+                <div class="card">
+                    <h3>Consulting Redefined</h3>
+                    <p>We redefine IT consulting, bridging the gap between complex solutions and strategic clarity. Our scope encompasses your entire digital landscape, ensuring every detail enhances your architecture's performance.</p>
+                    <img src="./public/vector.svg" alt="Consulting Icon">
                 </div>
-              </div>
+                <div class="card">
+                    <h3>Simplifying Outsourcing</h3>
+                    <p>We simplify the complexity of IT outsourcing, crafting resilient, cloud-based ecosystems. Education and migration become seamless, preparing your business for tomorrow's challenges today.</p>
+                    <img src="./public/vector-1.svg" alt="Outsourcing Icon">
+                </div>
+                <div class="card">
+                    <h3>Support with Agility</h3>
+                    <p>Our support model is built on flexibility, offering tailored solutions that keep your operations smooth and adaptable. Whether it's ongoing maintenance or critical support, we're there where and when you need us.</p>
+                    <img src="./public/vector1.svg" alt="Support Icon">
+                </div>
             </div>
-          </div>
         </div>
-        <div class="frame-parent">
-          <div class="what-we-do-wrapper">
-            <h1 class="what-we-do1">What we do</h1>
-          </div>
-          <div class="service-items-parent">
-            <div class="service-items">
-              <div class="service-items-child"></div>
-              <div class="consulting-redefined-we-container">
-                <p class="consulting-redefined">
-                  <b>Consulting Redefined</b>
-                </p>
-                <p class="we-redefine-it">
-                  We redefine IT consulting, bridging the gap between complex
-                  solutions and strategic clarity. Our scope encompasses your
-                  entire digital landscape, ensuring every detail enhances your
-                  architecture’s performance.
-                </p>
-              </div>
-              <div class="service-icons-wrapper">
-                <img
-                  class="service-icons"
-                  loading="lazy"
-                  alt=""
-                  src="./public/vector.svg"
-                />
-              </div>
-            </div>
-            <div class="service-items1">
-              <div class="service-items-item"></div>
-              <div class="consulting-redefined-we-container">
-                <p class="simplifying-outsourcing">
-                  <b>Simplifying Outsourcing</b>
-                </p>
-                <p class="consulting-redefined">We simplify the complexity</p>
-                <p class="bridging-systems">
-                  of IT outsourcing, crafting resilient, cloud-based ecosystems.
-                  Education and migration become seamless, preparing your
-                  business for tomorrow’s challenges today.
-                </p>
-              </div>
-              <div class="vector-wrapper">
-                <img class="service-icons" alt="" src="./public/vector-1.svg" />
-              </div>
-            </div>
-            <div class="service-items2">
-              <div class="service-items-child"></div>
-              <div class="consulting-redefined-we-container">
-                <p class="simplifying-outsourcing">
-                  <b>Support with Agility</b>
-                </p>
-                <p class="consulting-redefined">Our support model is built on flexibility, offering tailored solutions that keep your
-                  operations smooth and adaptable.</p>
-                <p class="bridging-systems">
-                  Whether it’s ongoing maintenance or critical support, we’re
-                  there where and when you need us.
-                </p>
-              </div>
-              <div class="vector-wrapper">
-                <img
-                  class="service-icons"
-                  loading="lazy"
-                  alt=""
-                  src="./public/vector1.svg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="desktop-6">
-        <div class="our-partners-parent">
-          <b class="our-partners1">Our partners</b>
-          <div class="frame-group">
-            <div class="rectangle-parent">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-            <div class="rectangle-group">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-            <div class="rectangle-container">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-            <div class="group-div">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-            <div class="rectangle-parent1">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-            <div class="rectangle-parent2">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-            <div class="rectangle-parent3">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-            <div class="rectangle-parent4">
-              <div class="frame-item"></div>
-              <div class="logotype">Logotype</div>
-            </div>
-          </div>
-        </div>
-        <h1 class="our-partners2">Our partners</h1>
+    </section>
+    
+
+    <section id="our-partners" class="partners-section">
+        <h2>Our partners</h2>
         <div class="frame-container">
-          <img
-            class="group-icon"
-            loading="lazy"
-            alt=""
-            src="./public/group-59@2x.png"
-          />
-
-          <img
-            class="group-icon"
-            loading="lazy"
-            alt=""
-            src="./public/group-60@2x.png"
-          />
-
-          <img
-            class="group-icon"
-            loading="lazy"
-            alt=""
-            src="./public/group-61@2x.png"
-          />
-
-          <img
-            class="group-icon"
-            loading="lazy"
-            alt=""
-            src="./public/group-62@2x.png"
-          />
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-59@2x.png" />
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-60@2x.png" />
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-61@2x.png" />
+            <img class="group-icon" loading="lazy" alt="" src="./public/group-62@2x.png" />
         </div>
-        <div class="desktop-6-child"></div>
-        <div class="desktop-6-child"></div>
-      </section>
-      <section class="desktop-8">
-        <div class="our-clients-wrapper">
-          <h1 class="our-clients1">Our clients</h1>
+    </section>
+    
+    <section id="our-clients" class="clients-section">
+        <h2>Our clients</h2>
+        <div class="clients-container first-row">
+            <img src="./public/ufg@2x.png" alt="UFG" class="ufg-icon">
+            <img src="./public/mcrsft@2x.png" alt="Microsoft" class="mcrsft-icon">
+            <img src="./public/hellenic@2x.png" alt="Hellenic" class="hellenic-icon">
         </div>
-        <div class="mask-group-parent">
-          <img
-            class="mask-group-icon1"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-
-          <img
-            class="mask-group-icon2"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-
-          <img
-            class="mask-group-icon3"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-
-          <img
-            class="mask-group-icon4"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-
-          <img
-            class="mask-group-icon5"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
+    
+        <!-- Второй грид с двумя ячейками -->
+        <div class="clients-container second-row">
+            <img src="./public/mp-logo@2x.png" alt="MP" class="mp-logo-icon">
+            <img src="./public/deutsche@2x.png" alt="Deutsche" class="deutsche-icon" loading="lazy">
         </div>
-        <div class="mask-group-parent">
-          <img
-            class="mask-group-icon1"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
+    </section>
 
-          <img
-            class="mask-group-icon2"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-
-          <img
-            class="mask-group-icon3"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-
-          <img
-            class="mask-group-icon4"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-
-          <img
-            class="mask-group-icon5"
-            alt=""
-            src="./public/mask-group-1@2x.png"
-          />
-        </div>
-        <div class="frame-parent1">
-          <div class="ufg-parent">
-            <img class="ufg-icon" alt="" src="./public/ufg@2x.png" />
-
-            <img class="mcrsft-icon" alt="" src="./public/mcrsft@2x.png" />
-
-            <img class="hellenic-icon" alt="" src="./public/hellenic@2x.png" />
-
-            <img class="mp-logo-icon" alt="" src="./public/mp-logo@2x.png" />
-
-            <img
-              class="deutsche-icon"
-              loading="lazy"
-              alt=""
-              src="./public/deutsche@2x.png"
-            />
-          </div>
-          <div class="frame-wrapper1">
-            <div class="frame-parent2">
-              <div class="contact-us-parent">
-                <h1 class="contact-us1">Contact us:</h1>
-                <div class="input-fields-parent">
-                  <input
-                    class="input-fields"
-                    placeholder="Your name"
-                    type="text"
-                  />
-
-                  <input
-                    class="input-fields"
-                    placeholder="Phone number"
-                    type="text"
-                  />
-
-                  <textarea
-                    class="input-fields2"
-                    placeholder="Message"
-                    rows="{7}"
-                    cols="{26}"
-                  >
-                  </textarea>
-                </div>
-              </div>
-              <img
-                class="submit-button-icon"
-                loading="lazy"
-                alt=""
-                src="./public/2-1@2x.png"
-              />
+    <section id="contacts" class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h2>Contact us:</h2>
+                <form>
+                    <input type="text" placeholder="Your name" required>
+                    <input type="tel" placeholder="Phone number" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
             </div>
-          </div>
-        </div>
-      </section>
-      <footer class="desktop-9">
-        <div class="contacts-parent">
-          <h1 class="our-clients1">Contacts</h1>
-          <div class="voskovcova-113028-152-00-prag-parent">
-            <div class="voskovcova-113028-152-00-container">
-              <p class="bridging-systems">Voskovcova 1130/28</p>
-              <p class="bridging-systems">152 00 Prague 5</p>
-              <p class="bridging-systems">Czech Republic</p>
+            <div class="contact-image">
+                <img src="./public/2-1@2x.png" alt="Contact illustration">
             </div>
-            <div class="email-parent">
-              <div class="voskovcova-113028-152-00-container">
-                +7 (903) 903-9768770
-              </div>
-              <h3 class="infointegrexeu">info@integrex.eu</h3>
-            </div>
-          </div>
         </div>
-        <div class="copyright-logo-parent">
-          <img
-            class="copyright-logo-icon"
-            loading="lazy"
-            alt=""
-            src="./public/vector-11.svg"
-          />
+    </section>
+    
+    <footer class="contacts-footer">
+        <h2>Contacts</h2>
+        <div class="contact-info">
+            <div class="address">
+                <p>Voskovcova 1130/28</p>
+                <p>152 00 Prague 5</p>
+                <p>Czech Republic</p>
+            </div>
+            <div class="contact-details">
+                <p>+7 (903) 903-9768770</p>
+                <p>info@integrex.eu</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>Integrex, 2024</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
 
-          <div class="integrex-2024-parent">
-            <div class="integrex-2024">Integrex, 2024</div>
-            <div class="privacy-policy-parent">
-              <div class="privacy-policy">Privacy Policy</div>
-              <div class="terms-conditions">Terms & Conditions</div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-
+    <script src="script.js"></script>
     <script>
-      var link = document.getElementById("link");
-      if (link) {
-        link.addEventListener("click", function () {
-          window.open("https://www.onfolk.com/demo");
+        window.addEventListener('scroll', function() {
+            let scrollPosition = window.pageYOffset;
+            let spacer = document.querySelector('.company-description .spacer');
+            let content = document.querySelector('.company-description .content');
+            
+            if (spacer && content) {
+                spacer.style.transform = `translateY(${scrollPosition * 0}px)`;
+                content.style.transform = `translateY(${scrollPosition * 0.05}px)`;
+            }
         });
-      }
-
-      function loadMobileCSS() {
-          var mobileCSS = document.getElementById('mobile-css');
-          if (window.innerWidth <= 768) {  // Можете изменить это значение в соответствии с вашими потребностями
-              mobileCSS.media = 'all';
-          } else {
-              mobileCSS.media = 'none';
-          }
-      }
-
-      // Вызываем функцию при загрузке страницы
-      window.addEventListener('load', loadMobileCSS);
-
-      // Вызываем функцию при изменении размера окна
-      window.addEventListener('resize', loadMobileCSS);
     </script>
-  </body>
+</body>
 </html>
